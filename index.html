@@ -3,9 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Cardápio de Pizzas</title>
 </head>
 <body>
-    
+    <section class="menu">
+        <div class="titulo">
+            <h2>Cardápio de Pizzas</h2>
+            <div class="underline"></div>
+        </div>
+
+        <!--Botões para escolher a categoria da pizza-->
+        <div class="botoes-menu">
+            <button class="botao" id="todas">Todas</button>
+            <button class="botao" id="salgadas">Salgadas</button>
+            <button class="botao" id="doce">Doces</button>
+        </div>
+
+        <!-- Pizzas -->
+        <div class="secao-centro">
+            <div class="pizza">
+                <img src="./assets/img/calabresa.jpg" class="photo" alt="item menu" />
+                <div class="info-pizza">
+                    <header>
+                        <h4> Pizza de Calabresa </h4>
+                        <h4 class="preco">R$45,00</h4>
+                    </header>
+                    <p class="item-text"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia delectus voluptatum commodi, cum nihil reiciendis accusantium laborum quod inventore optio quaerat fugit et, tempore iste impedit in illo neque ratione.</p>
+                </div>
+            </div>
+
+            <div class="pizza">
+                <img src="./assets/img/queijo.jpg" class="photo" alt="item menu" />
+                <div class="info-pizza">
+                    <header>
+                        <h4> Pizza de Queijo </h4>
+                        <h4 class="preco">R$45,00</h4>
+                    </header>
+                    <p class="item-text"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia delectus voluptatum commodi, cum nihil reiciendis accusantium laborum quod inventore optio quaerat fugit et, tempore iste impedit in illo neque ratione.</p>
+                </div>
+            </div>
+
+            <div class="pizza">
+                <img src="./assets/img/chocolate.jpg" class="photo" alt="item menu" />
+                <div class="info-pizza">
+                    <header>
+                        <h4> Pizza de Chocolate </h4>
+                        <h4 class="preco">R$45,00</h4>
+                    </header>
+                    <p class="item-text"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia delectus voluptatum commodi, cum nihil reiciendis accusantium laborum quod inventore optio quaerat fugit et, tempore iste impedit in illo neque ratione.</p>
+                </div>
+            </div>
+
+            <div class="pizza">
+                <img src="./assets/img/banana.jpg" class="photo" alt="item menu" />
+                <div class="info-pizza">
+                    <header>
+                        <h4> Pizza de Pizza de Banana </h4>
+                        <h4 class="preco">R$45,00</h4>
+                    </header>
+                    <p class="item-text"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia delectus voluptatum commodi, cum nihil reiciendis accusantium laborum quod inventore optio quaerat fugit et, tempore iste impedit in illo neque ratione.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--JAVASCRIPT-->
+<script src="app.js"></script>    
 </body>
 </html>
