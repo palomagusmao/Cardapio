@@ -1,4 +1,4 @@
-# Cardapio Pizzaria
+# Cardapio
 <br>
 <h1> Sobre o Projeto </h1>
 O Projeto é uma página onde é apresentado um cardápio de uma pizzaria, é possível filtrar as pizzas de acordo com as suas categorias, salgadas e doces, ou mostrar todas juntas.
