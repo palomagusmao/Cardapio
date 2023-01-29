@@ -77,16 +77,19 @@ const pizza = [
 
 const secaoCentro = document.querySelector(".secao-centro");
 /* atribuindo os itens da seção do centro na variavel secaoCentro */
-const container = document.querySelector(".botoes-menu");
+const botoesMenu = document.querySelector(".botoes-menu");
+//atribuindo à const botoesMenu a classe botoes-menu
 
 
-
-//load items
+//carregando os itens do cardapio
 window.addEventListener("DOMContentLoaded", function(){
-/* adicionando um evento no carregamento do script */
+/* adicionando dois eventos no carregamento do script 
+    displayMenuItems(pizza) -> chamando a apresentação do cardápio passando a lista das pizzas
+    displayMenuButtons() -> chamando o  apresentação dos botoes
+
+*/
     displayMenuItems(pizza);
     displayMenuButtons();
-    
 });
 
 function displayMenuItems(menuItems){
@@ -101,43 +104,47 @@ function displayMenuItems(menuItems){
                 <h4 class="preco">${item.preco}</h4>
             </header>
             <p class="item-text">${item.descricao}</p>
-        </div> </div>`;
+        </div> 
+        </div>`;
     });
-    displayMenu = displayMenu.join("");
+    displayMenu = displayMenu.join(""); //une a apresentação das pizzas do cardápio
 
-    secaoCentro.innerHTML= displayMenu; 
+    secaoCentro.innerHTML= displayMenu;  //permite a apresentação do displayMenu no HTML
 };
 
-function displayMenuButtons(){
-    const categorias= pizza.reduce(
-        function(valor, item){
-            if(!valor.includes(item.categoria)){
-                valor.push(item.categoria);
+//apresentação dos botões do menu
+function displayMenuButtons(){ 
+    const categorias= pizza.reduce( function(value, item){
+        //se a categoria não estiver inclusa, vai ser incluida
+            if(!value.includes(item.categoria)){ 
+                value.push(item.categoria);
             }
-            return valor;
+            return value; //se estiver, então vai apresentá-la
         },
-        ['todas']
+        ['todas'] //vai passar o todas para inicializar
     );
     const categoriaBtns = categorias.map(function(categoria){
             return  `<button class="botao" type="button" data-id=${categoria}>${categoria}</button>`;
-        }).join("");
-    container.innerHTML=categoriaBtns;
-    const botaocardapio = container.querySelectorAll(".botao");
+        }).join(""); //atribuindo as categorias na constante categoriaBtns
 
-    //filter items
-    botaocardapio.forEach(function(btn){
+    botoesMenu.innerHTML=categoriaBtns; //apresentação dos botoes no HTML de acordo com as categorias na lista
+    
+    const botaocardapio = botoesMenu.querySelectorAll(".botao");
+
+    //filtrando as pizzas 
+    botaocardapio.forEach(function(btn){ //pra cada botao vai ser adicionado um evento click
         btn.addEventListener("click", function(e){
-            const categoria = e.currentTarget.dataset.id;
+            const categoria = e.currentTarget.dataset.id; //vai pegar o botao pelo id
             const menuCategoria = pizza.filter(function(menuItem){
-                if (menuItem.categoria === categoria){
-                    return menuItem;
+                if (menuItem.categoria === categoria){ //a pizza será filtrada pela categoria
+                    return menuItem; //se for irgual a categoria selecionada então retorna ela
                 }
             });
-            if (categoria === "todas"){
+            if (categoria === "todas"){ //se a categoria for igual 'todas' então chama o displauMenuItems passando toda a lista de pizzas
                 displayMenuItems(pizza);
             }
             else{
-                displayMenuItems(menuCategoria);
+                displayMenuItems(menuCategoria); //senão, se for diferente de 'todas' então chama o displayMenuItems passando a categoria
             }
         });
     });
