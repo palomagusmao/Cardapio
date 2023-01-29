@@ -4,33 +4,73 @@ const pizza = [
         id:1,
         nome: "Pizza de Calabresa",
         categoria: "salgada",
-        preco: 45.50,
+        preco: 58.00,
         img:"./assets/img/calabresa.jpg",
-        descricao: 'hhsuhshsasshsnashnasn',
+        descricao: 'Calabresa fatiada com cebola e mussarela',
     },
     {
         id:2,
-        nome: "Pizza de Queijo",
+        nome: "Pizza Cinco Queijos",
         categoria: "salgada",
-        preco: 45.50,
+        preco: 65.50,
         img:"./assets/img/queijo.jpg",
-        descricao: 'hhsuhshsasshsnashnasn',
+        descricao: 'Mussarela, gorgonzola, catupiry, provolone e parmesão',
     },
     {
         id:3,
-        nome: "Pizza de Chocolate",
+        nome: "Pizza de Chocolate com Morangos",
         categoria: "doce",
-        preco: 45.50,
+        preco: 65.50,
         img:"./assets/img/chocolate.jpg",
-        descricao: 'hhsuhshsasshsnashnasn',
+        descricao: 'Chocolate (garoto) com granulado e morangos',
     },
     {
         id:4,
         nome: "Pizza de Banana",
         categoria: "doce",
-        preco: 45.50,
+        preco: 55.00,
         img:"./assets/img/banana.jpg",
-        descricao: 'hhsuhshsasshsnashnasn',
+        descricao: 'Banana, açúcar e canela',
+    },
+    {
+        id:5,
+        nome: "Pizza de Brócolis",
+        categoria: "salgada",
+        preco: 55.50,
+        img: "./assets/img/brocolis.jpg",
+        descricao: 'Brócolis coberto com mussarela e bacon',
+    },
+    {
+        id:6,
+        nome: "Pizza de Frango com Catupiry",
+        categoria: "salgada",
+        preco: 60.00,
+        img:"./assets/img/catupiry.jpg",
+        descricao: 'Peito de frango desfiado, coberto com catupiry e ervilha ',
+    },
+    {
+        id:7,
+        nome: "Pizza de Churros",
+        categoria: "doce",
+        preco: 45.50,
+        img:"./assets/img/churros.jpg",
+        descricao: 'Doce de leite com açucar e canela',
+    },
+    {
+        id:8,
+        nome: "Pizza de Chocolate com Coco",
+        categoria: "doce",
+        preco: 45.50,
+        img:"./assets/img/chocolate-coco.jpg",
+        descricao: 'Chocolate com coco ralado e cerejas',
+    },
+    {
+        id:9,
+        nome: "Pizza de Doce de Leite",
+        categoria: "doce",
+        preco: 45.50,
+        img:"./assets/img/doce-de-leite.jpg",
+        descricao: 'Doce de leite',
     },
 
 ];
@@ -61,7 +101,7 @@ function displayMenuItems(menuItems){
                 <h4 class="preco">${item.preco}</h4>
             </header>
             <p class="item-text">${item.descricao}</p>
-        </div>`;
+        </div> </div>`;
     });
     displayMenu = displayMenu.join("");
 

@@ -56,21 +56,24 @@
 .secao-centro{
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-wrap: wrap;
 }
 .pizzas img{
     height: 150px;
     width: 200px;
     border-radius: 10px;
+   border: 4px solid rgb(103, 163, 109);
+   /*box-shadow:  5px 5px 20px rgb(154, 154, 154);*/    
+
 }
 
 .pizzas{
     display: flex;
     align-items:center;
-    flex-direction: row;
+    flex-direction:wrap;
     padding: 30px;
     gap:30px;
+    
 }
 
 .info-pizza{
