@@ -5,8 +5,6 @@ O Projeto é uma página onde é apresentado um cardápio de uma pizzaria, é po
 <br><br>
 Utilizei HTML, CSS e JavaScript.
 <br><br>
-Este foi o meu primeiro projeto utilizando JavaScript, pude aprender sobre os tipos de variáveis, de arrays, de métodos e funções.
-<br><br>
 
 Foi utilizado os seguintes métodos: <br>
 .map - para criar um novo array baseado no que eu passei anteriormente com as alterações que defini<br>
