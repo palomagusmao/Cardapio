@@ -90,6 +90,7 @@ window.addEventListener("DOMContentLoaded", function(){
 */
     displayMenuItems(pizza);
     displayMenuButtons();
+    displayModalEscolha();
 });
 
 function displayMenuItems(menuItems){
@@ -97,19 +98,25 @@ function displayMenuItems(menuItems){
     let displayMenu = menuItems.map(function(item){
 
         return `<div class="pizzas"> 
-        <img src=${item.img} class="photo" alt=${item.nome} />
-        <div class="info-pizza">
-            <header>
-                <h4> ${item.nome} </h4>
-                <h4 class="preco">${item.preco}</h4>
-            </header>
-            <p class="item-text">${item.descricao}</p>
-        </div> 
+            <img src=${item.img} class="photo" alt=${item.nome} />
+            <div class="info-pizza">
+                <header>
+                    <h4> ${item.nome} </h4>
+                    <h4 class="preco">R$${item.preco.toFixed(2)}</h4>
+                </header>
+                <p class="item-text">${item.descricao}</p>
+                <button class="btn-escolher" type="button" data-id=${item.id}>Escolher pizza</>
+            </div>
         </div>`;
     });
+
     displayMenu = displayMenu.join(""); //une a apresentação das pizzas do cardápio
 
     secaoCentro.innerHTML= displayMenu;  //permite a apresentação do displayMenu no HTML
+
+    //quando a pizza for clicada
+    secaoCentro.querySelector('.pizzas button').addEventListener('click', escolherPizza)
+    
 };
 
 //apresentação dos botões do menu
@@ -148,4 +155,11 @@ function displayMenuButtons(){
             }
         });
     });
+};
+
+function escolherPizza(e){
+    e.preventDefault()
+    console.log('Clicou na pizza')
+
+    document.querySelector('.pizzaModal').style.display = 'flex'
 };

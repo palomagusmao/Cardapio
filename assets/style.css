@@ -104,3 +104,32 @@ header{
 h4{
     color:rgb(227, 20, 20)
 }
+
+.btn-escolher{
+    background-color:rgb(103, 163, 109);
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-left: 250px;
+}
+
+.btn-escolher:hover{
+    background-color:rgb(227, 20, 20);
+    color: #fff;
+}
+
+.pizzaModal{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: antiquewhite;
+    display: none;
+    transition: all ease .5s;
+    justify-content: center;
+    align-items: center;
+    overflow-y:auto ;
+}
