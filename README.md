@@ -15,10 +15,6 @@ Foi utilizado os seguintes métodos: <br>
 
 <h1>Screenshots</h1>
 
-![image](https://user-images.githubusercontent.com/14354417/215303520-cb81e169-3856-4429-b09e-124fac4fa95f.png)
-
-![image](https://user-images.githubusercontent.com/14354417/215303513-ae65784d-04bf-474b-a6b6-0fe431f8c810.png)
-
-![image](https://user-images.githubusercontent.com/14354417/215303494-c5ac332a-f5fc-478f-ab17-8582d2dbfca7.png)
-
-
+![cardapio-todas](https://user-images.githubusercontent.com/14354417/215919494-2c0eb3a3-a79e-4ded-954a-8773a51ed295.png)
+![cardapio-salgadas](https://user-images.githubusercontent.com/14354417/215919487-7978cba6-0b02-4cc2-9c41-365d07cb2e91.png)
+![cardapio-doces](https://user-images.githubusercontent.com/14354417/215919495-bf9ecb5b-74c9-4e33-a283-7c6294d1a270.png)
